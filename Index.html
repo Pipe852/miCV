@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hoja de Vida - Tu Nombre</title>
+  <style>
+    /* Minimal, clean CSS - edítalo desde VS Code */
+    :root{--accent:#0b5cff;--muted:#6b7280;--bg:#f7f8fb}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0f1724}
+    .container{max-width:1000px;margin:28px auto;padding:24px;background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(15,23,36,0.06)}
+    .top{display:flex;gap:20px;align-items:center}
+    .foto{width:140px;height:140px;border-radius:12px;overflow:hidden;border:4px solid #fff;box-shadow:0 6px 18px rgba(11,92,255,0.08)}
+    .foto img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:28px}
+    .cargo{color:var(--muted);margin-top:6px}
+    .contacto{margin-top:10px;display:flex;gap:12px;flex-wrap:wrap}
+    .pill{background:#f1f5f9;padding:6px 10px;border-radius:999px;font-size:13px;color:#0f1724}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:22px}
+    .card{padding:18px;border-radius:10px;background:#fff;border:1px solid #eef2ff}
+    .section{margin-bottom:16px}
+    h2{font-size:16px;margin:0 0 10px 0}
+    p{margin:0 0 8px 0;color:#0f1724}
+    ul{margin:0;padding-left:18px}
+    .skill{display:inline-block;padding:6px 10px;margin:6px 6px 0 0;border-radius:999px;background:#eef2ff;color:var(--accent);font-weight:600;font-size:13px}
+    .edu-item, .exp-item{margin-bottom:12px}
+    .muted{color:var(--muted);font-size:14px}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    /* Responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.foto{width:110px;height:110px}}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- TOP: FOTO y NOMBRE -->
+    <header class="top">
+      <div class="foto">
+        <!-- Reemplaza 'img/perfil.jpg' por la ruta de tu foto (por ejemplo: img/perfil.jpg) -->
+        <img src="img/perfil.jpg" alt="Foto de perfil" />
+      </div>
+      <div>
+        <h1>TU NOMBRE COMPLETO</h1>
+        <div class="cargo">Estudiante / Desarrollador / Tu cargo aquí</div>
+        <div class="contacto">
+          <div class="pill">📧 tu.email@correo.com</div>
+          <div class="pill">📱 +57 3xx xxx xxxx</div>
+          <div class="pill">📍 Ciudad, País</div>
+          <div class="pill">🔗 <a href="#" style="color:inherit;text-decoration:none">github.com/tuusuario</a></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- GRID: contenido principal y lateral -->
+    <div class="grid">
+      <!-- COLUMNA PRINCIPAL -->
+      <section>
+        <article class="card section">
+          <h2>Perfil profesional</h2>
+          <p class="muted">Breve párrafo (2-4 líneas) sobre ti: tus intereses, formación y qué buscas. Ej: Estudiante de Ingeniería de Sistemas con interés en desarrollo web y pedagogía digital.</p>
+        </article>
+
+        <article class="card section">
+          <h2>Experiencia</h2>
+          <div class="exp-item">
+            <div style="font-weight:700">Nombre de la posición — Organización</div>
+            <div class="muted">Mes Año — Mes Año • Ciudad</div>
+            <p>Descripción breve de responsabilidades y logros. Usa viñetas si necesitas:</p>
+            <ul>
+              <li>Responsabilidad o logro 1.</li>
+              <li>Responsabilidad o logro 2 (usa números si es posible).</li>
+            </ul>
+          </div>
+          <!-- Copia el bloque anterior para más experiencias -->
+        </article>
+
+        <article class="card section">
+          <h2>Proyectos relevantes</h2>
+          <div>
+            <strong>Nombre del proyecto</strong> — breve descripción (1-2 líneas). <span class="muted">Tecnologías:</span> HTML, CSS, JavaScript.
+            <ul>
+              <li>Qué hiciste o cuál fue tu aporte.</li>
+              <li>Enlace al repositorio o demo (si aplica).</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card section">
+          <h2>Educación</h2>
+          <div class="edu-item">
+            <div style="font-weight:700">Nombre del programa — Institución</div>
+            <div class="muted">Año de inicio — Año de finalización (o "En curso")</div>
+            <p>Información adicional: promedio, trabajo de grado, materias relevantes.</p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- COLUMNA LATERAL (320px) -->
+      <aside>
+        <div class="card section">
+          <h2>Habilidades</h2>
+          <div>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Git</span>
+            <span class="skill">Trabajo en equipo</span>
+            <!-- Añade o elimina skills -->
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Idiomas</h2>
+          <ul>
+            <li>Español — Nativo</li>
+            <li>Inglés — Intermedio (B1/B2)</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h2>Certificaciones / Cursos</h2>
+          <ul>
+            <li>Curso: Nombre — Plataforma — Año</li>
+            <li>Certificado: Nombre — Institución</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h2>Información adicional</h2>
+          <p class="muted">Disponibilidad: tiempo completo / medio tiempo. Licencias, voluntariados, hobbies relevantes.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Página generada como plantilla para el taller — edítala en Visual Studio Code y súbela a tu repositorio.
+    </footer>
+  </main>
+</body>
+</html>
